@@ -6,7 +6,7 @@ from myapi.database import SessionLocal
 from myapi.models import Politician
 
 # 엑셀 파일 경로를 지정하세요
-excel_file_path = 'C:\\Users\\ni730\\OneDrive\\바탕 화면\\국회의원정보.xlsx'
+excel_file_path = 'C:\\Users\\ni730\\OneDrive\\바탕 화면\\opensw_project\\국회의원정보.xlsx'
 
 # 엑셀 파일 읽기
 df = pd.read_excel(excel_file_path)
@@ -32,8 +32,11 @@ try:
         # 데이터베이스에 객체 추가
         db.add(politician)
 
-    # 데이터베이스에 변경사항 커밋
+        # 데이터베이스에 변경사항 커밋
     db.commit()
+except Exception as e:
+        print(f"Error occurred: {e}")
+        db.rollback()
 finally:
     # 세션 종료
     db.close()
