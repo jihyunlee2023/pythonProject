@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/attendance">출석률</a>
+            <a href="/politicians">정치인</a>
+            <a href="/quiz">퀴즈</a>
+            <a href="/login">로그인</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to the Main Page</h1>
+        <form action="/search" method="get">
+            <input type="text" name="query" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+        {% if query %}
+            <h2>Search Results for "{{ query }}"</h2>
+            {% if results %}
+                <ul>
+                    {% for result in results %}
+                        <li>{{ result.name }} - {{ result.party }} - {{ result.constituency }} - {{ result.contact }} - {{ result.gender }} - {{ result.election_count }} - {{ result.election_method }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>검색 결과가 없습니다.</p>
+            {% endif %}
+        {% endif %}
+    </main>
+</body>
+</html>

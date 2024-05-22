@@ -1,8 +1,6 @@
 from pydantic import BaseModel
 from sqlalchemy import Column, Integer, String, Boolean
-from sqlalchemy.ext.declarative import declarative_base
-
-Base = declarative_base()
+from myapi.database import Base
 
 class User(Base):
     __tablename__ = 'users'
@@ -25,3 +23,15 @@ class UserOut(BaseModel):
 
     class Config:
         orm_mode = True
+
+# Politician 모델 정의
+class Politician(Base):
+    __tablename__ = 'politicians'
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, index=True)
+    party = Column(String)
+    constituency = Column(String)
+    contact = Column(String)
+    gender = Column(String)
+    election_count = Column(String)
+    election_method = Column(String)

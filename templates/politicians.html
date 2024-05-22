@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Politicians</title>
+</head>
+<body>
+    <h1>Politicians</h1>
+    <ul>
+        {% for politician in politicians %}
+            <li>{{ politician.name }} - {{ politician.party }} - {{ politician.constituency }} - {{ politician.contact }} - {{ politician.gender }} - {{ politician.election_count }} - {{ politician.election_method }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

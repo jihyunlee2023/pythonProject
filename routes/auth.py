@@ -1,25 +1,20 @@
-from fastapi import FastAPI, Request, Depends, HTTPException, Form
+# myapi/routes/auth.py
+from fastapi import APIRouter, Request, Depends, HTTPException, Form
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError
 from passlib.context import CryptContext
 from pydantic import BaseModel, EmailStr, constr
-from myapi.database import SessionLocal, engine, Base
-from myapi.models import User, Politician  # Politician 모델 추가
-from myapi.routes.auth import router as auth_router
-from myapi.routes.main_page import router as main_page_router
-from myapi.routes.politicians import router as politicians_router
 import traceback
 
-app = FastAPI()
+from myapi.database import get_db  # 올바른 경로로 수정
+from myapi.models import User
 
-# Creating all tables in the database
-Base.metadata.create_all(bind=engine)  # 테이블 생성
+router = APIRouter()
+templates = Jinja2Templates(directory="myapi/templates")
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
-templates = Jinja2Templates(directory="myapi/templates")
 
 class UserIn(BaseModel):
     username: constr(min_length=1)
@@ -33,23 +28,11 @@ def get_password_hash(password):
 def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
 
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
-
-# Including routes
-app.include_router(auth_router)
-app.include_router(main_page_router)
-app.include_router(politicians_router)
-
-@app.get("/signup/", response_class=HTMLResponse)
+@router.get("/signup/", response_class=HTMLResponse)
 async def get_signup_page(request: Request):
     return templates.TemplateResponse("signup.html", {"request": request})
 
-@app.post("/signup/", response_class=HTMLResponse)
+@router.post("/signup/", response_class=HTMLResponse)
 async def create_user(request: Request, username: str = Form(...), email: str = Form(...), password: str = Form(...), password_confirm: str = Form(...), db: Session = Depends(get_db)):
     try:
         if password != password_confirm:
@@ -75,21 +58,13 @@ async def create_user(request: Request, username: str = Form(...), email: str = 
         print(traceback.format_exc())
         return templates.TemplateResponse("signup.html", {"request": request, "error": error_message, "username": username, "email": email})
 
-@app.get("/login/", response_class=HTMLResponse)
+@router.get("/login/", response_class=HTMLResponse)
 async def get_login_page(request: Request):
     return templates.TemplateResponse("login.html", {"request": request})
 
-@app.post("/login/", response_class=HTMLResponse)
+@router.post("/login/", response_class=HTMLResponse)
 async def login(request: Request, username: str = Form(...), password: str = Form(...), db: Session = Depends(get_db)):
     db_user = db.query(User).filter(User.username == username).first()
     if not db_user or not verify_password(password, db_user.hashed_password):
         return templates.TemplateResponse("login.html", {"request": request, "error": "Invalid username or password"})
     return templates.TemplateResponse("login.html", {"request": request, "success": "Login successful"})
-
-@app.get("/")
-def read_root():
-    return {"message": "Hello World"}
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
