@@ -1,8 +1,13 @@
+import os
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-SQLALCHEMY_DATABASE_URL = "sqlite:///./myapi.db"
+# 현재 파일의 디렉토리 경로를 가져옵니다.
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# 절대 경로를 사용하여 데이터베이스 파일 경로를 설정합니다.
+SQLALCHEMY_DATABASE_URL = f"sqlite:///{BASE_DIR}/myapi.db"
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}

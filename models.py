@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 from sqlalchemy import Column, Integer, String, Boolean
 from myapi.database import Base
+import secrets
 
 class User(Base):
     __tablename__ = 'users'
@@ -9,6 +10,7 @@ class User(Base):
     email = Column(String, unique=True, index=True)
     hashed_password = Column(String)
     is_active = Column(Boolean, default=True)
+    token = Column(String, unique=True, index=True)
 
 class UserIn(BaseModel):
     username: str
@@ -20,6 +22,7 @@ class UserOut(BaseModel):
     id: int
     username: str
     email: str
+    token: str
 
     class Config:
         orm_mode = True

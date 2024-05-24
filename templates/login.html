@@ -4,21 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #000;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        form {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Login Page</h1>
-    {% if error %}
-        <p style="color: red;">{{ error }}</p>
-    {% endif %}
-    {% if success %}
-        <p style="color: green;">{{ success }}</p>
-    {% endif %}
-    <form action="/login/" method="post">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" required><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
-        <input type="submit" value="Login">
-    </form>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/attendance">출석률</a>
+            <a href="/politicians">정치인</a>
+            <a href="/quiz">퀴즈</a>
+            <a href="/login">로그인</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Login Page</h1>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        {% if success %}
+            <p style="color: green;">{{ success }}</p>
+        {% endif %}
+        <form action="/login/" method="post">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Login">
+        </form>
+        <p><a href="/forgot-password/">비밀번호를 잊으셨나요?</a></p>
+        <p>회원이 아니신가요? <a href="/signup/">회원가입</a></p>
+    </main>
 </body>
 </html>
