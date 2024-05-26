@@ -27,6 +27,7 @@ Base.metadata.create_all(bind=engine)  # 테이블 생성
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 templates = Jinja2Templates(directory="myapi/templates")  # 템플릿 디렉토리 설정
+#수민 깃 처음
 
 
 class UserCreate(BaseModel):
