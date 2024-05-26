@@ -43,7 +43,7 @@ export default function RootLayout({
               </div>
             </CollapsibleContent>
           </Collapsible>
-          <Link className="flex items-center gap-2 text-lg font-semibold" href="#">
+          <Link className="flex items-center gap-2 text-lg font-semibold" href="/">
             <MountainIcon className="w-6 h-6" />
             <span className="text-3xl font-bold text-gray-50">국회의원 출석률</span>
           </Link>
