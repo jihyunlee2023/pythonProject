@@ -1,5 +1,6 @@
 # myapi/import_data.py
 
+import os
 import pandas as pd
 from sqlalchemy.orm import Session
 from myapi.database import SessionLocal
@@ -27,7 +28,8 @@ try:
             contact=row['소속위원회'],
             gender=row['성별'],
             election_count=row['당선횟수'],
-            election_method=row['당선방법']
+            election_method=row['당선방법'],
+            attendance=row['출석']  # 추가된 출석 열
         )
         # 데이터베이스에 객체 추가
         db.add(politician)

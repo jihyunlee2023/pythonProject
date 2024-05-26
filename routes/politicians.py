@@ -19,3 +19,10 @@ async def read_politicians(request: Request, db: Session = Depends(get_db)):
 async def search_politicians(request: Request, query: str, db: Session = Depends(get_db)):
     results = db.query(Politician).filter(Politician.name.contains(query)).all()
     return templates.TemplateResponse("politicians.html", {"request": request, "results": results, "query": query})
+
+@router.get("/politicians/{politician_id}", response_class=HTMLResponse)
+async def politician_detail(request: Request, politician_id: int, db: Session = Depends(get_db)):
+    politician = db.query(Politician).filter(Politician.id == politician_id).first()
+    if not politician:
+        raise HTTPException(status_code=404, detail="Politician not found")
+    return templates.TemplateResponse("politician_detail.html", {"request": request, "politician": politician})

@@ -26,7 +26,7 @@ Base.metadata.create_all(bind=engine)  # 테이블 생성
 # 비밀번호 해시화를 위한 CryptContext 객체 생성
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-templates = Jinja2Templates(directory="myapi/templates")
+templates = Jinja2Templates(directory="myapi/templates")  # 템플릿 디렉토리 설정
 
 
 class UserCreate(BaseModel):
@@ -169,7 +169,6 @@ async def get_main_page(request: Request):
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
     return templates.TemplateResponse("main_page.html", {"request": request})
-
 
 if __name__ == "__main__":
     import uvicorn

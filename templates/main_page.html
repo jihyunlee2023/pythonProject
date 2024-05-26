@@ -1,3 +1,4 @@
+<!-- myapi/templates/main_page.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +23,22 @@
         }
         li {
             margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -50,12 +67,32 @@
             {% if results %}
                 <ul>
                     {% for result in results %}
-                        <li>{{ result.name }} - {{ result.party }} - {{ result.constituency }} - {{ result.contact }} - {{ result.gender }} - {{ result.election_count }} - {{ result.election_method }}</li>
+                        <li>{{ result.name }} - {{ result.party }} - {{ result.constituency }} - {{ result.contact }} - {{ result.gender }} - {{ result.election_count }} - {{ result.election_method }} - 출석: {{ result.attendance }}</li>
                     {% endfor %}
                 </ul>
             {% else %}
                 <p>No results found for your search.</p>
             {% endif %}
+        {% else %}
+            <h2>Politicians</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Party</th>
+                        <th>Attendance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for politician in politicians %}
+                        <tr onclick="window.location.href='/politicians/{{ politician.id }}'">
+                            <td>{{ politician.name }}</td>
+                            <td>{{ politician.party }}</td>
+                            <td>{{ politician.attendance }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         {% endif %}
     </main>
 </body>

@@ -7,7 +7,7 @@
     <h1>Politicians</h1>
     <ul>
         {% for politician in politicians %}
-            <li>{{ politician.name }} - {{ politician.party }} - {{ politician.constituency }} - {{ politician.contact }} - {{ politician.gender }} - {{ politician.election_count }} - {{ politician.election_method }}</li>
+            <li>{{ politician.name }} - {{ politician.party }} - {{ politician.constituency }} - {{ politician.contact }} - {{ politician.gender }} - {{ politician.election_count }} - {{ politician.election_method }} - 출석: {{ politician.attendance }}</li>
         {% endfor %}
     </ul>
 </body>

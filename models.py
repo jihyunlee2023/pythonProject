@@ -38,3 +38,4 @@ class Politician(Base):
     gender = Column(String)
     election_count = Column(String)
     election_method = Column(String)
+    attendance = Column(Integer)  # 출석을 나타내는 정수형 열 추가

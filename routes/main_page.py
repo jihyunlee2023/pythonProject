@@ -1,3 +1,4 @@
+# myapi/routes/main_page.py
 from fastapi import APIRouter, Request, Depends, HTTPException
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
@@ -20,8 +21,9 @@ def get_current_user(request: Request, db: Session = Depends(get_db)):
     return db_user
 
 @router.get("/", response_class=HTMLResponse)
-async def main_page(request: Request):
-    return templates.TemplateResponse("main_page.html", {"request": request})
+async def main_page(request: Request, db: Session = Depends(get_db)):
+    politicians = db.query(Politician).all()
+    return templates.TemplateResponse("main_page.html", {"request": request, "politicians": politicians})
 
 @router.get("/search", response_class=HTMLResponse)
 async def search(request: Request, query: str, db: Session = Depends(get_db)):

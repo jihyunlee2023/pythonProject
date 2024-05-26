@@ -1,0 +1,18 @@
+<!-- myapi/templates/politician_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Politician Detail</title>
+</head>
+<body>
+    <h1>{{ politician.name }}</h1>
+    <p><strong>Party:</strong> {{ politician.party }}</p>
+    <p><strong>Constituency:</strong> {{ politician.constituency }}</p>
+    <p><strong>Contact:</strong> {{ politician.contact }}</p>
+    <p><strong>Gender:</strong> {{ politician.gender }}</p>
+    <p><strong>Election Count:</strong> {{ politician.election_count }}</p>
+    <p><strong>Election Method:</strong> {{ politician.election_method }}</p>
+    <p><strong>Attendance:</strong> {{ politician.attendance }}</p>
+    <a href="/politicians">Back to list</a>
+</body>
+</html>
