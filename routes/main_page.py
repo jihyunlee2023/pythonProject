@@ -1,13 +1,12 @@
-# myapi/routes/main_page.py
 from fastapi import APIRouter, Request, Depends, HTTPException
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 from sqlalchemy.orm import Session
-from myapi.database import get_db
-from myapi.models import Politician, User
+from database import get_db  # 경로 수정
+from models import Politician, User  # 경로 수정
 
 router = APIRouter()
-templates = Jinja2Templates(directory="myapi/templates")
+templates = Jinja2Templates(directory="templates")  # 경로 수정
 
 def get_current_user(request: Request, db: Session = Depends(get_db)):
     token = request.headers.get("Authorization")

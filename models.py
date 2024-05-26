@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from sqlalchemy import Column, Integer, String, Boolean
-from myapi.database import Base
+from database import Base  # 수정된 경로
 import secrets
 
 class User(Base):

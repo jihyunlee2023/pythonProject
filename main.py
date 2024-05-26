@@ -5,11 +5,11 @@ from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError
 from passlib.context import CryptContext
 from pydantic import BaseModel, EmailStr, constr
-from .database import SessionLocal, engine, Base
-from .models import User, Politician
-from .routes.auth import router as auth_router
-from .routes.main_page import router as main_page_router
-from .routes.politicians import router as politicians_router
+from database import SessionLocal, engine, Base
+from models import User, Politician
+from routes.auth import router as auth_router
+from routes.main_page import router as main_page_router
+from routes.politicians import router as politicians_router
 import traceback
 import logging
 import secrets
@@ -26,7 +26,7 @@ Base.metadata.create_all(bind=engine)  # 테이블 생성
 # 비밀번호 해시화를 위한 CryptContext 객체 생성
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-templates = Jinja2Templates(directory="myapi/templates")  # 템플릿 디렉토리 설정
+templates = Jinja2Templates(directory="templates")  # 템플릿 디렉토리 설정
 
 class UserCreate(BaseModel):
     username: constr(min_length=1)
@@ -173,5 +173,4 @@ async def get_user():
 
 if __name__ == "__main__":
     import uvicorn
-
     uvicorn.run(app, host="127.0.0.1", port=8000)

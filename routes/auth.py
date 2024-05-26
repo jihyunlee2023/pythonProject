@@ -1,4 +1,3 @@
-# myapi/routes/auth.py
 from fastapi import APIRouter, Request, Depends, HTTPException, Form
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
@@ -8,11 +7,11 @@ from passlib.context import CryptContext
 from pydantic import BaseModel, EmailStr, constr
 import traceback
 
-from myapi.database import get_db  # 올바른 경로로 수정
-from myapi.models import User
+from database import get_db  # 경로 수정
+from models import User  # 경로 수정
 
 router = APIRouter()
-templates = Jinja2Templates(directory="myapi/templates")
+templates = Jinja2Templates(directory="templates")  # 경로 수정
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
