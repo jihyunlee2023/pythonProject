@@ -243,7 +243,7 @@ export default function Component() {
   )
 }
 
-function ArrowUpDownIcon(props) {
+function ArrowUpDownIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -266,7 +266,7 @@ function ArrowUpDownIcon(props) {
 }
 
 
-function ChevronDownIcon(props) {
+function ChevronDownIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -286,7 +286,7 @@ function ChevronDownIcon(props) {
 }
 
 
-function LocateIcon(props) {
+function LocateIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -310,7 +310,7 @@ function LocateIcon(props) {
 }
 
 
-function MenuIcon(props) {
+function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -332,7 +332,7 @@ function MenuIcon(props) {
 }
 
 
-function MountainIcon(props) {
+function MountainIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -352,7 +352,7 @@ function MountainIcon(props) {
 }
 
 
-function PartyPopperIcon(props) {
+function PartyPopperIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -380,7 +380,7 @@ function PartyPopperIcon(props) {
 }
 
 
-function SearchIcon(props) {
+function SearchIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -401,7 +401,7 @@ function SearchIcon(props) {
 }
 
 
-function StarIcon(props) {
+function StarIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

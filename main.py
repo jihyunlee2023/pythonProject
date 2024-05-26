@@ -27,8 +27,6 @@ Base.metadata.create_all(bind=engine)  # 테이블 생성
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 templates = Jinja2Templates(directory="myapi/templates")  # 템플릿 디렉토리 설정
-#수민 깃 처음
-
 
 class UserCreate(BaseModel):
     username: constr(min_length=1)
@@ -36,14 +34,11 @@ class UserCreate(BaseModel):
     password: constr(min_length=1)
     password_confirm: constr(min_length=1)
 
-
 def get_password_hash(password):
     return pwd_context.hash(password)
 
-
 def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
-
 
 def get_db():
     db = SessionLocal()
@@ -52,17 +47,25 @@ def get_db():
     finally:
         db.close()
 
-
 # Including routes
 app.include_router(auth_router)
 app.include_router(main_page_router)
 app.include_router(politicians_router)
 
+# CORS 설정 추가
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # 실제 운영에서는 특정 도메인을 명시하는 것이 좋습니다.
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/signup", response_class=HTMLResponse)
 async def get_signup_page(request: Request):
     return templates.TemplateResponse("signup.html", {"request": request})
-
 
 @app.post("/signup", response_class=JSONResponse)
 async def create_user(user: UserCreate, db: Session = Depends(get_db)):
@@ -91,11 +94,9 @@ async def create_user(user: UserCreate, db: Session = Depends(get_db)):
         logger.error(traceback.format_exc())
         raise HTTPException(status_code=500, detail=error_message)
 
-
 @app.get("/login", response_class=HTMLResponse)
 async def get_login_page(request: Request):
     return templates.TemplateResponse("login.html", {"request": request})
-
 
 @app.post("/login", response_class=JSONResponse)
 async def login(username: str = Form(...), password: str = Form(...), db: Session = Depends(get_db)):
@@ -106,11 +107,9 @@ async def login(username: str = Form(...), password: str = Form(...), db: Sessio
     logger.info(f"User {username} logged in successfully.")
     return {"token": db_user.token}
 
-
 @app.get("/forgot-password", response_class=HTMLResponse)
 async def get_forgot_password_page(request: Request):
     return templates.TemplateResponse("forgot_password.html", {"request": request})
-
 
 @app.post("/forgot-password", response_class=HTMLResponse)
 async def forgot_password(request: Request, username: str, email: str, db: Session = Depends(get_db)):
@@ -132,7 +131,6 @@ async def forgot_password(request: Request, username: str, email: str, db: Sessi
         logger.error(error_message)
         logger.error(traceback.format_exc())
         raise HTTPException(status_code=500, detail=error_message)
-
 
 @app.post("/reset-password", response_class=HTMLResponse)
 async def reset_password(request: Request, username: str, email: str,
@@ -161,15 +159,17 @@ async def reset_password(request: Request, username: str, email: str,
         logger.error(traceback.format_exc())
         raise HTTPException(status_code=500, detail=error_message)
 
-
 @app.get("/main", response_class=HTMLResponse)
 async def get_main_page(request: Request):
     return templates.TemplateResponse("main_page.html", {"request": request})
 
-
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
     return templates.TemplateResponse("main_page.html", {"request": request})
+
+@app.get("/user", response_class=JSONResponse)
+async def get_user():
+    return {"name": "John Doe", "email": "johndoe@example.com"}
 
 if __name__ == "__main__":
     import uvicorn

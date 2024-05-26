@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react'; // useState와 useEffect를 import합니다.
 import { CollapsibleTrigger, CollapsibleContent, Collapsible } from "@/components/ui/collapsible";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
@@ -7,9 +8,10 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from 'next/navigation';
 import { DropdownMenuTrigger, DropdownMenuRadioItem, DropdownMenuRadioGroup, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu";
 import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "@/components/ui/table";
+import { Member } from '../app/types/types';
 
-const MemberTableRow = ({ name, party, district, attendance }) => {
-  const router = useRouter();
+const MemberTableRow = ({ name, party, district, attendance }: Member) => {
+    const router = useRouter();
 
   const handleClick = () => {
     router.push('/member');
@@ -37,7 +39,21 @@ const MemberTableRow = ({ name, party, district, attendance }) => {
   );
 };
 
-export default function Component() {
+export default function Home() {
+  // 여기서 상태와 효과 훅을 선언합니다.
+  const [user, setUser] = useState(null); // useState 훅을 사용하여 user 상태를 선언합니다.
+
+  useEffect(() => {
+    fetch('http://127.0.0.1:8002/user')  // FastAPI 서버가 실행되는 주소를 사용하여 데이터를 가져옵니다.
+      .then(response => response.json())
+      .then(data => setUser(data))
+      .catch(error => console.error('Error fetching user:', error)); // 에러를 콘솔에 로그합니다.
+  }, []); // 빈 배열을 두 번째 인자로 전달하여 컴포넌트가 마운트될 때만 실행되도록 합니다.
+
+  // 데이터를 불러오는 동안 로딩 메시지를 표시합니다.
+  if (!user) return <div>Loading...</div>;
+
+  // 데이터를 성공적으로 불러온 후에는 사용자 정보를 표시합니다.
   return (
     <>
       <header className="flex items-center h-16 px-6 border-b shrink-0 bg-gray-950 dark:bg-gray-950">
@@ -72,7 +88,7 @@ export default function Component() {
           <div className="relative">
             <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-400" />
             <Input
-              className="pl-8 sm:w-[300px] md:w-[200px] lg:w/[300px] bg-gray-800 text-gray-50 placeholder:text-gray-400"
+              className="pl-8 sm:w-[300px] md:w/[200px] lg:w/[300px] bg-gray-800 text-gray-50 placeholder:text-gray-400"
               placeholder="의원 검색"
               type="search"
             />
@@ -110,19 +126,13 @@ export default function Component() {
                 <TableRow>
                   <TableHead className="w-[150px]">이름</TableHead>
                   <TableHead className="w/[100px]">정당</TableHead>
-                  <TableHead className="w/[150px]">지역구</TableHead>
+                  <TableHead className="w/[150px]">선거구</TableHead>
                   <TableHead className="text-right">출석률</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
-                <MemberTableRow name="홍길동" party="더불어민주당" district="서울 강남구" attendance="95%" />
-                <MemberTableRow name="김철수" party="국민의힘" district="부산 해운대구" attendance="92%" />
-                <MemberTableRow name="이영희" party="정의당" district="광주 북구" attendance="90%" />
-                <MemberTableRow name="박민지" party="더불어민주당" district="대전 유성구" attendance="88%" />
-                <MemberTableRow name="최준혁" party="국민의힘" district="인천 남동구" attendance="85%" />
-                <MemberTableRow name="김지영" party="정의당" district="경기 수원시" attendance="82%" />
-                <MemberTableRow name="이철호" party="더불어민주당" district="울산 중구" attendance="80%" />
-                <MemberTableRow name="박영수" party="국민의힘" district="경북 포항시" attendance="78%" />
+                {/* API에서 받은 데이터를 사용하여 사용자 정보를 표시합니다. */}
+                <MemberTableRow name={user.name} party="더불어민주당" district="서울 해운대구" attendance={92} />
               </TableBody>
             </Table>
           </div>
@@ -301,4 +311,3 @@ function StarIcon(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
-
