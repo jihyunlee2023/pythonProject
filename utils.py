@@ -1,8 +1,8 @@
 # myapi/utils.py
-
+#네이버 뉴스 오픈 api 코드
 import urllib.request
 import json
-import logging  # 이 줄을 추가합니다.
+import logging
 
 # Logger 설정
 logging.basicConfig(level=logging.INFO)
