@@ -10,6 +10,7 @@ from .models import User, Politician
 from .routes.auth import router as auth_router
 from .routes.main_page import router as main_page_router
 from .routes.politicians import router as politicians_router
+from .utils import search_news  # 추가된 부분
 import traceback
 import logging
 import secrets
@@ -170,6 +171,7 @@ async def get_main_page(request: Request):
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
     return templates.TemplateResponse("main_page.html", {"request": request})
+
 
 if __name__ == "__main__":
     import uvicorn
