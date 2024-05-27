@@ -11,31 +11,31 @@ import Link from "next/link"
 
 export default function Component() {
   return (
-    <div className="flex h-screen w-full items-center justify-center bg-gray-100 dark:bg-gray-950">
+    <div className="flex h-screen w-full items-center justify-center bg-gray-white">
       <div className="mx-auto max-w-[400px] w-full space-y-6">
         <div className="flex flex-col items-center space-y-2">
           <MountainIcon className="h-10 w-10" />
-          <h1 className="text-2xl font-bold">Welcome back</h1>
+          <h1 className="text-2xl font-bold">환영합니다</h1>
         </div>
         <Card>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">이메일</Label>
               <Input id="email" placeholder="m@example.com" required type="email" />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">비밀번호</Label>
               <Input id="password" required type="password" />
             </div>
           </CardContent>
           <CardFooter>
-            <Button className="w-full">Sign in</Button>
+            <Button className="w-full">로그인</Button>
           </CardFooter>
         </Card>
         <div className="text-center text-sm text-gray-500 dark:text-gray-400">
-          Don't have an account?
+          아직 계정이 없으신가요? {" "}
           <Link className="font-medium underline underline-offset-4" href="signup">
-            Sign up
+            회원가입
           </Link>
         </div>
       </div>
