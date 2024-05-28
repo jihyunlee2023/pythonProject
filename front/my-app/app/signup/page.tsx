@@ -1,5 +1,5 @@
 /**
- * v0 by Vercel.
+ * v0 by Vercel..
  * @see https://v0.dev/t/cQ9a3KPq9rI
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
