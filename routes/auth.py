@@ -1,15 +1,13 @@
-# myapi/routes/auth.py
 from fastapi import APIRouter, Request, Depends, HTTPException, Form
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError
 from passlib.context import CryptContext
 from pydantic import BaseModel, EmailStr, constr
-import traceback
-
 from myapi.database import get_db  # 올바른 경로로 수정
 from myapi.models import User
+import traceback
 
 router = APIRouter()
 templates = Jinja2Templates(directory="myapi/templates")
@@ -27,6 +25,12 @@ def get_password_hash(password):
 
 def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
+
+def get_current_user(request: Request):
+    user = request.session.get('user')
+    if user is None:
+        raise HTTPException(status_code=401, detail="Not authenticated")
+    return user
 
 @router.get("/signup/", response_class=HTMLResponse)
 async def get_signup_page(request: Request):
@@ -67,4 +71,10 @@ async def login(request: Request, username: str = Form(...), password: str = For
     db_user = db.query(User).filter(User.username == username).first()
     if not db_user or not verify_password(password, db_user.hashed_password):
         return templates.TemplateResponse("login.html", {"request": request, "error": "Invalid username or password"})
-    return templates.TemplateResponse("login.html", {"request": request, "success": "Login successful"})
+    request.session['user'] = {"username": db_user.username, "email": db_user.email}
+    return RedirectResponse(url="/", status_code=302)
+
+@router.get("/logout/", response_class=HTMLResponse)
+async def logout(request: Request):
+    request.session.pop('user', None)
+    return RedirectResponse(url="/")
