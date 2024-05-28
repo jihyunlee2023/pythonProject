@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 
 export default function Component() {
   return (
+    <div className="bg-white min-h-screen">
     <div className="mx-auto max-w-md space-y-6 py-12">
       <div className="space-y-2 text-center">
         <h1 className="text-3xl font-bold">계정 생성</h1>
@@ -36,5 +37,6 @@ export default function Component() {
         </Button>
       </form>
     </div>
+  </div>
   )
 }
