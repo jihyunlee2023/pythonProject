@@ -42,14 +42,18 @@ export default function Component() {
   return (
     <>
       <header className="flex items-center h-16 px-6 border-b shrink-0 bg-gray-950 dark:bg-gray-950">
-        <FaRegEye className="text-white h-12 w-12 mr-3.5" /> {/* 아이콘 스타일링 확인 */}
+        <Link className="flex items-center gap-1 text-gray-50 hover:bg-gray-800 px-4 py-2 roundㅊed-md" href="임시링크">
+          <StarIcon className="w-5 h-5" />
+          <span>즐겨찾기</span>
+        </Link>
+        <FaRegEye className="text-white h-12 w-12 ml-3 mr-3.5" /> {/* 아이콘 스타일링 확인 */}
           <span className="text-3xl font-bold text-gray-50">사우론의 눈</span>
       
         <form className="flex-1">
           <div className="relative">
             <SearchIcon className="absolute ml-3 left-2.5 top-2.5 h-4 w-4 text-gray-400" />
             <Input
-              className=" ml-3 mr-3 pl-8 sm:w-[300px] md:w-[200px] lg:w/[300px] bg-gray-800 text-gray-50 placeholder:text-gray-400"
+              className=" ml-3 mr-3 pl-8 w-full sm:w-[300px] md:w-[200px] lg:w-[850px] bg-gray-800 text-gray-50 placeholder:text-gray-400"
               placeholder="의원 검색"
               type="search"
             />
