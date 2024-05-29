@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useRouter } from 'next/navigation';
+import { FaRegEye } from "react-icons/fa"; // 아이콘 가져오기기
 import { DropdownMenuTrigger, DropdownMenuRadioItem, DropdownMenuRadioGroup, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu";
 import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "@/components/ui/table";
 
@@ -41,38 +42,18 @@ export default function Component() {
   return (
     <>
       <header className="flex items-center h-16 px-6 border-b shrink-0 bg-gray-950 dark:bg-gray-950">
-        <Collapsible className="flex items-center gap-4">
-          <CollapsibleTrigger className="flex items-center gap-2 text-lg font-semibold [&[data-state=open]>svg]:rotate-90]">
-            <MenuIcon className="w-6 h-6" />
-            <span className="text-gray-50">Menu</span>
-            <ChevronDownIcon className="w-4 h-4 ml-auto text-gray-400" />
-          </CollapsibleTrigger>
-          <CollapsibleContent className="absolute top-16 left-0 z-10 w-full bg-gray-950 border-t border-gray-800 shadow-lg">
-            <div className="grid gap-4 p-6">
-              <Link className="flex items-center gap-2 text-gray-50 hover:bg-gray-800 px-4 py-2 rounded-md" href="#">
-                <PartyPopperIcon className="w-5 h-5" />
-                <span>By Party</span>
-              </Link>
-              <Link className="flex items-center gap-2 text-gray-50 hover:bg-gray-800 px-4 py-2 rounded-md" href="#">
-                <LocateIcon className="w-5 h-5" />
-                <span>By District</span>
-              </Link>
-              <Link className="flex items-center gap-2 text-gray-50 hover:bg-gray-800 px-4 py-2 rounded-md" href="#">
-                <StarIcon className="w-5 h-5" />
-                <span>Favorites</span>
-              </Link>
-            </div>
-          </CollapsibleContent>
-        </Collapsible>
-        <Link className="flex items-center gap-2 text-lg font-semibold" href="#">
-          <MountainIcon className="w-6 h-6" />
-          <span className="text-3xl font-bold text-gray-50">국회의원 출석률</span>
+        <Link className="flex items-center gap-1 text-gray-50 hover:bg-gray-800 px-4 py-2 roundㅊed-md" href="임시링크">
+          <StarIcon className="w-5 h-5" />
+          <span>즐겨찾기</span>
         </Link>
+        <FaRegEye className="text-white h-12 w-12 ml-3 mr-3.5" /> {/* 아이콘 스타일링 확인 */}
+          <span className="text-3xl font-bold text-gray-50">사우론의 눈</span>
+      
         <form className="flex-1">
           <div className="relative">
-            <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-400" />
+            <SearchIcon className="absolute ml-3 left-2.5 top-2.5 h-4 w-4 text-gray-400" />
             <Input
-              className="pl-8 sm:w-[300px] md:w-[200px] lg:w/[300px] bg-gray-800 text-gray-50 placeholder:text-gray-400"
+              className=" ml-3 mr-3 pl-8 w-full sm:w-[300px] md:w-[200px] lg:w-[850px] bg-gray-800 text-gray-50 placeholder:text-gray-400"
               placeholder="의원 검색"
               type="search"
             />
@@ -96,7 +77,7 @@ export default function Component() {
             </DropdownMenuContent>
           </DropdownMenu>
           <Link href="/login">
-            <Button className="bg-gray-800 text-gray-50 hover:bg-gray-700" variant="outline">
+            <Button className="ml-3 bg-gray-800 text-gray-50 hover:bg-gray-700" variant="outline">
               로그인
             </Button>
           </Link>
@@ -217,24 +198,6 @@ function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-function MountainIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-    </svg>
-  );
-}
 
 function PartyPopperIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
