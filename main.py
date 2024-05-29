@@ -4,16 +4,17 @@ from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError
 from passlib.context import CryptContext
-from pydantic import BaseModel, EmailStr, constr
 from .database import SessionLocal, engine, Base
 from .models import User, Politician
+from .schemas import UserCreate, UserOut  # Import Pydantic models from schemas.py
 from .routes.auth import router as auth_router
 from .routes.main_page import router as main_page_router
 from .routes.politicians import router as politicians_router
-from .utils import search_news  # 추가된 부분
 import traceback
 import logging
 import secrets
+from .utils import search_news  # 추가된 부분
+from starlette.middleware.sessions import SessionMiddleware
 
 # Logger 설정
 logging.basicConfig(level=logging.INFO)
@@ -53,6 +54,15 @@ def get_db():
     finally:
         db.close()
 
+# get_current_user 함수 추가
+def get_current_user(request: Request, db: Session = Depends(get_db)):
+    token = request.cookies.get("token")
+    if not token:
+        raise HTTPException(status_code=401, detail="Not authenticated")
+    user = db.query(User).filter(User.token == token).first()
+    if not user:
+        raise HTTPException(status_code=401, detail="Invalid token")
+    return user
 
 # Including routes
 app.include_router(auth_router)
@@ -104,8 +114,13 @@ async def login(username: str = Form(...), password: str = Form(...), db: Sessio
     if not db_user or not verify_password(password, db_user.hashed_password):
         raise HTTPException(status_code=400, detail="Invalid username or password")
 
+    response = RedirectResponse(url="/", status_code=303)
+    response.set_cookie(key="token", value=db_user.token)
     logger.info(f"User {username} logged in successfully.")
-    return {"token": db_user.token}
+    return response # 토큰 쿠키 사용
+
+    #logger.info(f"User {username} logged in successfully.")
+    #return {"token": db_user.token}
 
 
 @app.get("/forgot-password", response_class=HTMLResponse)
@@ -172,6 +187,36 @@ async def get_main_page(request: Request):
 async def read_root(request: Request):
     return templates.TemplateResponse("main_page.html", {"request": request})
 
+@app.post("/add_favorite/{politician_id}")
+async def add_favorite_politician(politician_id: int, request: Request, db: Session = Depends(get_db)):
+    user = get_current_user(request)
+    db_user = db.query(User).filter(User.username == user.username).first()
+    politician = db.query(Politician).filter(Politician.id == politician_id).first()
+    if not politician:
+        raise HTTPException(status_code=404, detail="Politician not found")
+
+    if politician in db_user.favorite_politicians:
+        raise HTTPException(status_code=400, detail="Politician already in favorites")
+
+    db_user.favorite_politicians.append(politician)
+    db.commit()
+    return {"message": "Politician added to favorites"}
+
+
+@app.delete("/remove_favorite/{politician_id}")
+async def remove_favorite_politician(politician_id: int, request: Request, db: Session = Depends(get_db)):
+    user = get_current_user(request)
+    db_user = db.query(User).filter(User.username == user.username).first()
+    politician = db.query(Politician).filter(Politician.id == politician_id).first()
+    if not politician:
+        raise HTTPException(status_code=404, detail="Politician not found")
+
+    if politician not in db_user.favorite_politicians:
+        raise HTTPException(status_code=404, detail="Politician not in favorites")
+
+    db_user.favorite_politicians.remove(politician)
+    db.commit()
+    return {"message": "Politician removed from favorites"}
 
 if __name__ == "__main__":
     import uvicorn

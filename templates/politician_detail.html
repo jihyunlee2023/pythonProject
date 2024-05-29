@@ -27,6 +27,11 @@
         {% endif %}
     </ul>
 
+    <!-- Add favorite button -->
+    <form action="/favorite/{{ politician.id }}" method="post">
+        <button type="submit">Add to Favorites</button>
+    </form>
+
     <a href="/politicians">Back to list</a>
 </body>
 </html>

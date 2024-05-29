@@ -3,15 +3,30 @@ from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 from sqlalchemy.orm import Session
 from myapi.database import get_db
-from myapi.models import Politician
+from myapi.models import Politician, User  # User 모델을 import합니다.
 from myapi.utils import search_news  # 추가된 부분
+from fastapi.responses import JSONResponse
 import logging  # 이 줄을 추가합니다.
 
 router = APIRouter()
-templates = Jinja2Templates(directory="myapi/templates")
 # Logger 설정
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+templates = Jinja2Templates(directory="myapi/templates")
+
+
+# get_current_user 함수 정의 또는 import
+def get_current_user(request: Request, db: Session = Depends(get_db)):
+    token = request.cookies.get("token")
+    if not token:
+        raise HTTPException(status_code=401, detail="Not authenticated")
+
+    user = db.query(User).filter(User.token == token).first()
+    if not user:
+        raise HTTPException(status_code=401, detail="Invalid token")
+
+    return user
 
 @router.get("/politicians", response_class=HTMLResponse)
 async def read_politicians(request: Request, db: Session = Depends(get_db)):
@@ -41,3 +56,18 @@ async def politician_detail(request: Request, politician_id: int, db: Session = 
     except Exception as e:
         logger.error(f"Exception occurred: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal Server Error")
+
+@router.post("/politicians/{politician_id}/favorite", response_class=JSONResponse)
+async def favorite_politician(politician_id: int, request: Request, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    politician = db.query(Politician).filter(Politician.id == politician_id).first()
+    if not politician:
+        raise HTTPException(status_code=404, detail="Politician not found")
+
+    if str(politician_id) not in current_user.favorite_politicians.split(','):
+        if current_user.favorite_politicians:
+            current_user.favorite_politicians += f",{politician_id}"
+        else:
+            current_user.favorite_politicians = str(politician_id)
+        db.commit()
+
+    return {"message": "Politician added to favorites"}
