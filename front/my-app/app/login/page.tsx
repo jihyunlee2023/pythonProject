@@ -2,6 +2,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { CardContent, CardFooter, Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { FaRegEye } from "react-icons/fa"; // 아이콘 가져오기
 import Link from "next/link";
 
 export default function Component() {
@@ -11,7 +12,7 @@ export default function Component() {
         <div className="mx-auto max-w-[400px] w-full space-y-6">
           <Card className="min-h-[400px] flex flex-col justify-center items-center"> {/* 원하는 높이를 설정합니다 */}
             <CardContent className="flex flex-col items-center space-y-4 w-full"> {/* w-full 클래스 추가 */}
-              <MountainIcon className="h-10 w-10" />
+              <FaRegEye className="text-gray-700 h-12 w-12" /> {/* 아이콘 스타일링 확인 */}
               <h1 className="text-2xl font-bold">환영합니다</h1>
               <div className="space-y-2 w-full">
                 <Label htmlFor="email">이메일</Label>
@@ -36,24 +37,5 @@ export default function Component() {
         </div>
       </div>
     </div>
-  );
-}
-
-function MountainIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-    </svg>
   );
 }
