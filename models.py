@@ -1,8 +1,10 @@
-from sqlalchemy import Column, Integer, String, Boolean, Text, Table, ForeignKey  # Table과 ForeignKey를 import합니다.
+from sqlalchemy import Column, Integer, String, Boolean, Table, ForeignKey
 from sqlalchemy.orm import relationship, declarative_base
-from myapi.database import Base
-import secrets
+from pydantic import BaseModel, EmailStr
 
+Base = declarative_base()
+
+# User 모델 정의
 class User(Base):
     __tablename__ = 'users'
     id = Column(Integer, primary_key=True, index=True)
@@ -10,13 +12,7 @@ class User(Base):
     email = Column(String, unique=True, index=True)
     hashed_password = Column(String)
     is_active = Column(Boolean, default=True)
-    token = Column(String, unique=True, index=True)
-    favorite_politicians = Column(Text, nullable=True)  # 추가된 부분
-
-    # 관계 설정
-    politicians = relationship("Politician", secondary="user_politicians", back_populates="users")
-
-
+    favorite_politicians = relationship("Politician", secondary="user_politicians", back_populates="users")
 
 # Politician 모델 정의
 class Politician(Base):
@@ -29,10 +25,8 @@ class Politician(Base):
     gender = Column(String)
     election_count = Column(String)
     election_method = Column(String)
-    attendance = Column(Integer)  # 출석을 나타내는 정수형 열 추가
-    # 관계 설정
-    users = relationship("User", secondary="user_politicians", back_populates="politicians")
-
+    attendance = Column(Integer)
+    users = relationship("User", secondary="user_politicians", back_populates="favorite_politicians")
 
 # 유저와 정치인 간의 관계를 위한 조인 테이블 정의
 user_politicians = Table(
@@ -41,3 +35,21 @@ user_politicians = Table(
     Column('politician_id', Integer, ForeignKey('politicians.id'), primary_key=True)
 )
 
+# Pydantic 모델 정의
+class UserCreate(BaseModel):
+    username: str
+    email: EmailStr
+    password: str
+    password_confirm: str
+
+    class Config:
+        orm_mode = True
+
+class UserOut(BaseModel):
+    id: int
+    username: str
+    email: str
+    token: str
+
+    class Config:
+        orm_mode = True
