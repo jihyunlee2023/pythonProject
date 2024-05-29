@@ -4,16 +4,16 @@ from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError
 from passlib.context import CryptContext
-from pydantic import BaseModel, EmailStr, constr
 from .database import SessionLocal, engine, Base
 from .models import User, Politician
+from .schemas import UserCreate, UserOut  # Import Pydantic models from schemas.py
 from .routes.auth import router as auth_router
 from .routes.main_page import router as main_page_router
 from .routes.politicians import router as politicians_router
-from .utils import search_news  # 추가된 부분
 import traceback
 import logging
 import secrets
+from .utils import search_news  # 추가된 부분
 from starlette.middleware.sessions import SessionMiddleware
 
 # Logger 설정
@@ -190,14 +190,33 @@ async def read_root(request: Request):
 @app.post("/add_favorite/{politician_id}")
 async def add_favorite_politician(politician_id: int, request: Request, db: Session = Depends(get_db)):
     user = get_current_user(request)
-    db_user = db.query(User).filter(User.username == user['username']).first()
+    db_user = db.query(User).filter(User.username == user.username).first()
     politician = db.query(Politician).filter(Politician.id == politician_id).first()
     if not politician:
         raise HTTPException(status_code=404, detail="Politician not found")
 
+    if politician in db_user.favorite_politicians:
+        raise HTTPException(status_code=400, detail="Politician already in favorites")
+
     db_user.favorite_politicians.append(politician)
     db.commit()
     return {"message": "Politician added to favorites"}
+
+
+@app.delete("/remove_favorite/{politician_id}")
+async def remove_favorite_politician(politician_id: int, request: Request, db: Session = Depends(get_db)):
+    user = get_current_user(request)
+    db_user = db.query(User).filter(User.username == user.username).first()
+    politician = db.query(Politician).filter(Politician.id == politician_id).first()
+    if not politician:
+        raise HTTPException(status_code=404, detail="Politician not found")
+
+    if politician not in db_user.favorite_politicians:
+        raise HTTPException(status_code=404, detail="Politician not in favorites")
+
+    db_user.favorite_politicians.remove(politician)
+    db.commit()
+    return {"message": "Politician removed from favorites"}
 
 if __name__ == "__main__":
     import uvicorn

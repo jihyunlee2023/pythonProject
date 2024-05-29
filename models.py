@@ -1,6 +1,5 @@
-from pydantic import BaseModel
 from sqlalchemy import Column, Integer, String, Boolean, Text, Table, ForeignKey  # Table과 ForeignKey를 import합니다.
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, declarative_base
 from myapi.database import Base
 import secrets
 
@@ -18,20 +17,6 @@ class User(Base):
     politicians = relationship("Politician", secondary="user_politicians", back_populates="users")
 
 
-class UserIn(BaseModel):
-    username: str
-    email: str
-    password: str
-    password_confirm: str
-
-class UserOut(BaseModel):
-    id: int
-    username: str
-    email: str
-    token: str
-
-    class Config:
-        orm_mode = True
 
 # Politician 모델 정의
 class Politician(Base):
@@ -49,9 +34,10 @@ class Politician(Base):
     users = relationship("User", secondary="user_politicians", back_populates="politicians")
 
 
-# 유저와 정치인 간의 관계를 위한 테이블 정의
+# 유저와 정치인 간의 관계를 위한 조인 테이블 정의
 user_politicians = Table(
     'user_politicians', Base.metadata,
-    Column('user_id', Integer, ForeignKey('users.id')),
-    Column('politician_id', Integer, ForeignKey('politicians.id'))
+    Column('user_id', Integer, ForeignKey('users.id'), primary_key=True),
+    Column('politician_id', Integer, ForeignKey('politicians.id'), primary_key=True)
 )
+
