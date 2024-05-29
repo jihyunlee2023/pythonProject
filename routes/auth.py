@@ -68,6 +68,7 @@ async def get_login_page(request: Request):
 
 @router.post("/login/", response_class=HTMLResponse)
 async def login(request: Request, username: str = Form(...), password: str = Form(...), db: Session = Depends(get_db)):
+    print("[/login/]: test...")
     db_user = db.query(User).filter(User.username == username).first()
     if not db_user or not verify_password(password, db_user.hashed_password):
         return templates.TemplateResponse("login.html", {"request": request, "error": "Invalid username or password"})

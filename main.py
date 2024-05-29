@@ -1,26 +1,33 @@
+import logging
+import os
+import traceback
 from fastapi import FastAPI, Request, Depends, HTTPException, Form
 from fastapi.responses import JSONResponse, HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError
 from passlib.context import CryptContext
-from .database import SessionLocal, engine, Base
-from .models import User, Politician
-from .schemas import UserCreate, UserOut  # Import Pydantic models from schemas.py
+from pydantic import BaseModel, EmailStr, constr
+from .database import SessionLocal, engine
+from .models import Base, User, Politician
 from .routes.auth import router as auth_router
 from .routes.main_page import router as main_page_router
 from .routes.politicians import router as politicians_router
-import traceback
-import logging
-import secrets
-from .utils import search_news  # 추가된 부분
 from starlette.middleware.sessions import SessionMiddleware
 
+# 로그 파일 경로 설정
+log_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'debug.log')
+
 # Logger 설정
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    handlers=[
+                        logging.FileHandler(log_file_path),
+                        logging.StreamHandler()
+                    ])
 logger = logging.getLogger(__name__)
 
-app = FastAPI()
+app = FastAPI(debug=True)
 
 # Creating all tables in the database
 Base.metadata.create_all(bind=engine)  # 테이블 생성
@@ -54,15 +61,6 @@ def get_db():
     finally:
         db.close()
 
-# get_current_user 함수 추가
-def get_current_user(request: Request, db: Session = Depends(get_db)):
-    token = request.cookies.get("token")
-    if not token:
-        raise HTTPException(status_code=401, detail="Not authenticated")
-    user = db.query(User).filter(User.token == token).first()
-    if not user:
-        raise HTTPException(status_code=401, detail="Invalid token")
-    return user
 
 # Including routes
 app.include_router(auth_router)
@@ -110,17 +108,32 @@ async def get_login_page(request: Request):
 
 @app.post("/login", response_class=JSONResponse)
 async def login(username: str = Form(...), password: str = Form(...), db: Session = Depends(get_db)):
-    db_user = db.query(User).filter(User.username == username).first()
-    if not db_user or not verify_password(password, db_user.hashed_password):
-        raise HTTPException(status_code=400, detail="Invalid username or password")
+    logger.debug(f"Login attempt for username: {username}")
+    try:
+        db_user = db.query(User).filter(User.username == username).first()
+        if not db_user:
+            logger.warning(f"User not found: {username}")
+            raise HTTPException(status_code=400, detail="Invalid username or password")
 
-    response = RedirectResponse(url="/", status_code=303)
-    response.set_cookie(key="token", value=db_user.token)
-    logger.info(f"User {username} logged in successfully.")
-    return response # 토큰 쿠키 사용
+        logger.debug(f"User found: {db_user.username}")
 
-    #logger.info(f"User {username} logged in successfully.")
-    #return {"token": db_user.token}
+        if not verify_password(password, db_user.hashed_password):
+            logger.warning(f"Invalid password for user: {username}")
+            raise HTTPException(status_code=400, detail="Invalid username or password")
+
+        logger.info(f"User {username} logged in successfully.")
+        return JSONResponse(content={"token": db_user.token}, status_code=200)
+
+    except SQLAlchemyError as e:
+        error_message = f"Database error: {e}"
+        logger.error(error_message)
+        logger.error(traceback.format_exc())
+        raise HTTPException(status_code=500, detail=error_message)
+    except Exception as e:
+        error_message = f"Unexpected error: {e}"
+        logger.error(error_message)
+        logger.error(traceback.format_exc())
+        raise HTTPException(status_code=500, detail=error_message)
 
 
 @app.get("/forgot-password", response_class=HTMLResponse)
@@ -186,37 +199,18 @@ async def get_main_page(request: Request):
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
     return templates.TemplateResponse("main_page.html", {"request": request})
-
-@app.post("/add_favorite/{politician_id}")
-async def add_favorite_politician(politician_id: int, request: Request, db: Session = Depends(get_db)):
-    user = get_current_user(request)
-    db_user = db.query(User).filter(User.username == user.username).first()
-    politician = db.query(Politician).filter(Politician.id == politician_id).first()
-    if not politician:
-        raise HTTPException(status_code=404, detail="Politician not found")
-
-    if politician in db_user.favorite_politicians:
-        raise HTTPException(status_code=400, detail="Politician already in favorites")
-
-    db_user.favorite_politicians.append(politician)
-    db.commit()
-    return {"message": "Politician added to favorites"}
-
-
-@app.delete("/remove_favorite/{politician_id}")
-async def remove_favorite_politician(politician_id: int, request: Request, db: Session = Depends(get_db)):
-    user = get_current_user(request)
-    db_user = db.query(User).filter(User.username == user.username).first()
-    politician = db.query(Politician).filter(Politician.id == politician_id).first()
-    if not politician:
-        raise HTTPException(status_code=404, detail="Politician not found")
-
-    if politician not in db_user.favorite_politicians:
-        raise HTTPException(status_code=404, detail="Politician not in favorites")
-
-    db_user.favorite_politicians.remove(politician)
-    db.commit()
-    return {"message": "Politician removed from favorites"}
+#
+# @app.post("/add_favorite/{politician_id}")
+# async def add_favorite_politician(politician_id: int, request: Request, db: Session = Depends(get_db)):
+#     user = get_current_user(request)
+#     db_user = db.query(User).filter(User.username == user['username']).first()
+#     politician = db.query(Politician).filter(Politician.id == politician_id).first()
+#     if not politician:
+#         raise HTTPException(status_code=404, detail="Politician not found")
+#
+#     db_user.favorite_politicians.append(politician)
+#     db.commit()
+#     return {"message": "Politician added to favorites"}
 
 if __name__ == "__main__":
     import uvicorn
