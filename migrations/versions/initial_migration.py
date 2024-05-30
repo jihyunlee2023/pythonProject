@@ -1,0 +1,48 @@
+# alembic/versions/initial_migration.py
+
+from alembic import op
+import sqlalchemy as sa
+
+# revision identifiers, used by Alembic.
+revision = 'initial'
+down_revision = None
+branch_labels = None
+depends_on = None
+
+def upgrade():
+    op.create_table(
+        'users',
+        sa.Column('id', sa.Integer, primary_key=True),
+        sa.Column('name', sa.String, index=True),
+        sa.Column('favorite_politicians', sa.String),
+    )
+
+    op.create_table(
+        'politicians',
+        sa.Column('id', sa.Integer, primary_key=True),
+        sa.Column('name', sa.String, index=True),
+        sa.Column('party', sa.String),
+        sa.Column('constituency', sa.String),
+        sa.Column('contact', sa.String),
+        sa.Column('gender', sa.String),
+        sa.Column('election_count', sa.String),
+        sa.Column('election_method', sa.String),
+        sa.Column('attendance', sa.Integer),
+        sa.Column('building', sa.Integer),
+        sa.Column('deposit', sa.Integer),
+        sa.Column('car', sa.Integer),
+        sa.Column('political_fund', sa.Integer),
+        sa.Column('securities', sa.Integer),
+        sa.Column('land', sa.Integer),
+    )
+
+    op.create_table(
+        'user_politicians',
+        sa.Column('user_id', sa.Integer, sa.ForeignKey('users.id')),
+        sa.Column('politician_id', sa.Integer, sa.ForeignKey('politicians.id')),
+    )
+
+def downgrade():
+    op.drop_table('user_politicians')
+    op.drop_table('politicians')
+    op.drop_table('users')

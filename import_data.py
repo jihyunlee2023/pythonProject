@@ -29,7 +29,13 @@ try:
             gender=row['성별'],
             election_count=row['당선횟수'],
             election_method=row['당선방법'],
-            attendance=row['출석']  # 추가된 출석 열
+            attendance=row['출석'],  # 추가된 출석 열
+            building = row['건물'],
+            deposit = row['예금'],
+            car = row['자동차'],
+            political_fund = row['정치자금'],
+            securities = row['증권'],
+            land = row['토지']
         )
         # 데이터베이스에 객체 추가
         db.add(politician)

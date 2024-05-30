@@ -1,9 +1,11 @@
 from sqlalchemy import Column, Integer, String, Boolean, Table, ForeignKey
 from sqlalchemy.orm import relationship, declarative_base
 from pydantic import BaseModel, EmailStr
+from myapi.database import Base
 
 Base = declarative_base()
 
+# User 모델 정의
 # User 모델 정의
 class User(Base):
     __tablename__ = 'users'
@@ -12,6 +14,7 @@ class User(Base):
     email = Column(String, unique=True, index=True)
     hashed_password = Column(String)
     is_active = Column(Boolean, default=True)
+    token = Column(String, unique=True, index=True)
     favorite_politicians = relationship("Politician", secondary="user_politicians", back_populates="users")
 
 # Politician 모델 정의
@@ -26,6 +29,12 @@ class Politician(Base):
     election_count = Column(String)
     election_method = Column(String)
     attendance = Column(Integer)
+    building = Column(Integer)   #재산 추가
+    deposit = Column(Integer)
+    car = Column(Integer)
+    political_fund = Column(Integer)
+    securities = Column(Integer)
+    land = Column(Integer)
     users = relationship("User", secondary="user_politicians", back_populates="favorite_politicians")
 
 # 유저와 정치인 간의 관계를 위한 조인 테이블 정의
