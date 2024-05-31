@@ -13,8 +13,10 @@ def upgrade():
     op.create_table(
         'users',
         sa.Column('id', sa.Integer, primary_key=True),
-        sa.Column('name', sa.String, index=True),
-        sa.Column('favorite_politicians', sa.String),
+        sa.Column('username', sa.String, unique=True, index=True),
+        sa.Column('email', sa.String, unique=True, index=True),
+        sa.Column('hashed_password', sa.String),
+        #sa.Column('favorite_politicians', sa.String),
     )
 
     op.create_table(

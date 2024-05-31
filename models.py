@@ -13,8 +13,8 @@ class User(Base):
     username = Column(String, unique=True, index=True)
     email = Column(String, unique=True, index=True)
     hashed_password = Column(String)
-    is_active = Column(Boolean, default=True)
-    token = Column(String, unique=True, index=True)
+    #is_active = Column(Boolean, default=True)
+    #token = Column(String, unique=True, index=True)
     #favorite_politicians = relationship("Politician", secondary="user_politicians", back_populates="users")
 
 # Politician 모델 정의
