@@ -15,7 +15,7 @@ class User(Base):
     hashed_password = Column(String)
     is_active = Column(Boolean, default=True)
     token = Column(String, unique=True, index=True)
-    favorite_politicians = relationship("Politician", secondary="user_politicians", back_populates="users")
+    #favorite_politicians = relationship("Politician", secondary="user_politicians", back_populates="users")
 
 # Politician 모델 정의
 class Politician(Base):
@@ -35,14 +35,14 @@ class Politician(Base):
     political_fund = Column(Integer)
     securities = Column(Integer)
     land = Column(Integer)
-    users = relationship("User", secondary="user_politicians", back_populates="favorite_politicians")
+    #users = relationship("User", secondary="user_politicians", back_populates="favorite_politicians")
 
 # 유저와 정치인 간의 관계를 위한 조인 테이블 정의
-user_politicians = Table(
-    'user_politicians', Base.metadata,
-    Column('user_id', Integer, ForeignKey('users.id'), primary_key=True),
-    Column('politician_id', Integer, ForeignKey('politicians.id'), primary_key=True)
-)
+#user_politicians = Table(
+#    'user_politicians', Base.metadata,
+#    Column('user_id', Integer, ForeignKey('users.id'), primary_key=True),
+#    Column('politician_id', Integer, ForeignKey('politicians.id'), primary_key=True)
+#)
 
 # Pydantic 모델 정의
 class UserCreate(BaseModel):
