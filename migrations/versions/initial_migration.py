@@ -36,13 +36,13 @@ def upgrade():
         sa.Column('land', sa.Integer),
     )
 
-    op.create_table(
-        'user_politicians',
-        sa.Column('user_id', sa.Integer, sa.ForeignKey('users.id')),
-        sa.Column('politician_id', sa.Integer, sa.ForeignKey('politicians.id')),
-    )
+    #op.create_table(
+    #    'user_politicians',
+    #    sa.Column('user_id', sa.Integer, sa.ForeignKey('users.id')),
+    #    sa.Column('politician_id', sa.Integer, sa.ForeignKey('politicians.id')),
+    #)
 
 def downgrade():
-    op.drop_table('user_politicians')
+    #op.drop_table('user_politicians')
     op.drop_table('politicians')
     op.drop_table('users')
