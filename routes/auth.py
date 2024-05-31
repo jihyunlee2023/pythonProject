@@ -5,8 +5,9 @@ from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError
 from passlib.context import CryptContext
 from pydantic import BaseModel, EmailStr, constr
-from myapi.database import get_db  # 올바른 경로로 수정
+from myapi.database import get_db
 from myapi.models import User
+from myapi.jwt_utils import create_access_token, decode_access_token
 import traceback
 
 router = APIRouter()
@@ -68,14 +69,68 @@ async def get_login_page(request: Request):
 
 @router.post("/login/", response_class=HTMLResponse)
 async def login(request: Request, username: str = Form(...), password: str = Form(...), db: Session = Depends(get_db)):
-    print("[/login/]: test...")
     db_user = db.query(User).filter(User.username == username).first()
     if not db_user or not verify_password(password, db_user.hashed_password):
         return templates.TemplateResponse("login.html", {"request": request, "error": "Invalid username or password"})
-    request.session['user'] = {"username": db_user.username, "email": db_user.email}
-    return RedirectResponse(url="/", status_code=302)
+    access_token = create_access_token(data={"sub": db_user.username})
+    response = RedirectResponse(url="/", status_code=302)
+    response.set_cookie(key="access_token", value=access_token, httponly=True)
+    return response
 
 @router.get("/logout/", response_class=HTMLResponse)
 async def logout(request: Request):
-    request.session.pop('user', None)
-    return RedirectResponse(url="/")
+    response = RedirectResponse(url="/")
+    response.delete_cookie("access_token")
+    return response
+
+@router.get("/forgot-password", response_class=HTMLResponse)
+async def get_forgot_password_page(request: Request):
+    return templates.TemplateResponse("forgot_password.html", {"request": request})
+
+@router.post("/forgot-password", response_class=HTMLResponse)
+async def forgot_password(request: Request, username: str, email: str, db: Session = Depends(get_db)):
+    try:
+        db_user = db.query(User).filter(User.username == username, User.email == email).first()
+        if not db_user:
+            raise HTTPException(status_code=400, detail="Invalid username or email")
+
+        return templates.TemplateResponse("forgot_password.html",
+                                          {"request": request, "show_reset_form": True, "username": username,
+                                           "email": email})
+    except SQLAlchemyError as e:
+        error_message = f"Database error: {e}"
+        print(error_message)
+        print(traceback.format_exc())
+        return templates.TemplateResponse("forgot_password.html", {"request": request, "error": error_message, "username": username, "email": email})
+    except Exception as e:
+        error_message = f"Unexpected error: {e}"
+        print(error_message)
+        print(traceback.format_exc())
+        return templates.TemplateResponse("forgot_password.html", {"request": request, "error": error_message, "username": username, "email": email})
+
+@router.post("/reset-password", response_class=HTMLResponse)
+async def reset_password(request: Request, username: str, email: str,
+                         new_password: str, confirm_new_password: str, db: Session = Depends(get_db)):
+    try:
+        if new_password != confirm_new_password:
+            raise HTTPException(status_code=400, detail="Passwords do not match")
+
+        db_user = db.query(User).filter(User.username == username, User.email == email).first()
+        if not db_user:
+            raise HTTPException(status_code=400, detail="Invalid username or email")
+
+        hashed_password = get_password_hash(new_password)
+        db_user.hashed_password = hashed_password
+        db.commit()
+
+        return RedirectResponse(url="/login", status_code=303)
+    except SQLAlchemyError as e:
+        error_message = f"Database error: {e}"
+        print(error_message)
+        print(traceback.format_exc())
+        return templates.TemplateResponse("reset_password.html", {"request": request, "error": error_message, "username": username, "email": email})
+    except Exception as e:
+        error_message = f"Unexpected error: {e}"
+        print(error_message)
+        print(traceback.format_exc())
+        return templates.TemplateResponse("reset_password.html", {"request": request, "error": error_message, "username": username, "email": email})

@@ -13,7 +13,7 @@ from .models import Base, User, Politician
 from .routes.auth import router as auth_router
 from .routes.main_page import router as main_page_router
 from .routes.politicians import router as politicians_router
-from starlette.middleware.sessions import SessionMiddleware
+
 
 # 로그 파일 경로 설정
 log_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'debug.log')
@@ -33,25 +33,25 @@ app = FastAPI(debug=True)
 Base.metadata.create_all(bind=engine)  # 테이블 생성
 
 # 비밀번호 해시화를 위한 CryptContext 객체 생성
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+#pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-templates = Jinja2Templates(directory="myapi/templates")  # 템플릿 디렉토리 설정
+#templates = Jinja2Templates(directory="myapi/templates")  # 템플릿 디렉토리 설정
 #수민 깃 처음
 
 
-class UserCreate(BaseModel):
-    username: constr(min_length=1)
-    email: EmailStr
-    password: constr(min_length=1)
-    password_confirm: constr(min_length=1)
+#class UserCreate(BaseModel):
+    #username: constr(min_length=1)
+    #email: EmailStr
+    #password: constr(min_length=1)
+    #password_confirm: constr(min_length=1)
 
 
-def get_password_hash(password):
-    return pwd_context.hash(password)
+#def get_password_hash(password):
+#    return pwd_context.hash(password)
 
 
-def verify_password(plain_password, hashed_password):
-    return pwd_context.verify(plain_password, hashed_password)
+#def verify_password(plain_password, hashed_password):
+#    return pwd_context.verify(plain_password, hashed_password)
 
 
 def get_db():
@@ -68,7 +68,7 @@ app.include_router(main_page_router)
 app.include_router(politicians_router)
 
 
-@app.get("/signup", response_class=HTMLResponse)
+'''@app.get("/signup", response_class=HTMLResponse)
 async def get_signup_page(request: Request):
     return templates.TemplateResponse("signup.html", {"request": request})
 
@@ -189,7 +189,7 @@ async def reset_password(request: Request, username: str, email: str,
         logger.error(error_message)
         logger.error(traceback.format_exc())
         raise HTTPException(status_code=500, detail=error_message)
-
+'''
 
 @app.get("/main", response_class=HTMLResponse)
 async def get_main_page(request: Request):
