@@ -13,6 +13,16 @@
     <p><strong>Election Method:</strong> {{ politician.election_method }}</p>
     <p><strong>Attendance:</strong> {{ politician.attendance }}</p>
 
+    <h2>Assets</h2>
+    <ul>
+        <li><strong>Land:</strong> {{ politician.land }}</li>
+        <li><strong>Building:</strong> {{ politician.building }}</li>
+        <li><strong>Car:</strong> {{ politician.car }}</li>
+        <li><strong>Deposit:</strong> {{ politician.deposit }}</li>
+        <li><strong>Political Fund:</strong> {{ politician.political_fund }}</li>
+        <li><strong>Securities:</strong> {{ politician.securities }}</li>
+    </ul>
+
     <h2>Related News</h2>
     <ul>
         {% if news_data %}
@@ -26,11 +36,6 @@
             <p>No related news found.</p>
         {% endif %}
     </ul>
-
-    <!-- Add favorite button -->
-    <form action="/favorite/{{ politician.id }}" method="post">
-        <button type="submit">Add to Favorites</button>
-    </form>
 
     <a href="/politicians">Back to list</a>
 </body>

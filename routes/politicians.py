@@ -52,22 +52,26 @@ async def politician_detail(request: Request, politician_id: int, db: Session = 
         else:
             logger.info(f"News data for {politician_name}: {news_data}")
 
-        return templates.TemplateResponse("politician_detail.html", {"request": request, "politician": politician, "news_data": news_data})
+        return templates.TemplateResponse("politician_detail.html", {
+            "request": request,
+            "politician": politician,
+            "news_data": news_data
+        })
     except Exception as e:
         logger.error(f"Exception occurred: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal Server Error")
 
-@router.post("/politicians/{politician_id}/favorite", response_class=JSONResponse)
-async def favorite_politician(politician_id: int, request: Request, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
-    politician = db.query(Politician).filter(Politician.id == politician_id).first()
-    if not politician:
-        raise HTTPException(status_code=404, detail="Politician not found")
+#@router.post("/politicians/{politician_id}/favorite", response_class=JSONResponse)
+#async def favorite_politician(politician_id: int, request: Request, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+#    politician = db.query(Politician).filter(Politician.id == politician_id).first()
+#    if not politician:
+#        raise HTTPException(status_code=404, detail="Politician not found")
 
-    if str(politician_id) not in current_user.favorite_politicians.split(','):
-        if current_user.favorite_politicians:
-            current_user.favorite_politicians += f",{politician_id}"
-        else:
-            current_user.favorite_politicians = str(politician_id)
-        db.commit()
+#    if str(politician_id) not in current_user.favorite_politicians.split(','):
+#        if current_user.favorite_politicians:
+#            current_user.favorite_politicians += f",{politician_id}"
+#        else:
+#            current_user.favorite_politicians = str(politician_id)
+#        db.commit()
 
-    return {"message": "Politician added to favorites"}
+    #return {"message": "Politician added to favorites"}
