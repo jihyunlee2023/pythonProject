@@ -1,3 +1,4 @@
+## chat gpt 사용해서 코드 작성
 import os
 from datetime import datetime, timedelta
 from jwcrypto import jwt, jwk

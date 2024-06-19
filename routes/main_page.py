@@ -1,3 +1,4 @@
+## chat gpt 사용해서 코드 작성
 # myapi/routes/main_page.py
 from fastapi import APIRouter, Request, Depends, HTTPException
 from fastapi.templating import Jinja2Templates

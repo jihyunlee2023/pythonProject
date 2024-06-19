@@ -1,3 +1,4 @@
+## chat gpt 사용해서 코드 작성
 import sys
 import os
 

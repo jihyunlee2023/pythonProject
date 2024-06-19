@@ -1,3 +1,4 @@
+## chat gpt 사용해서 코드 작성
 from sqlalchemy import Column, Integer, String, Boolean, Table, ForeignKey
 from sqlalchemy.orm import relationship, declarative_base
 from pydantic import BaseModel, EmailStr

@@ -1,5 +1,5 @@
 # myapi/utils.py
-#네이버 뉴스 오픈 api 코드
+#네이버 뉴스 오픈 api 코드 사용
 import urllib.request
 import json
 import logging

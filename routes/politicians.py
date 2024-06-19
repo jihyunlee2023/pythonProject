@@ -1,3 +1,4 @@
+## chat gpt 사용해서 코드 작성
 from fastapi import APIRouter, Request, Depends, HTTPException
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
