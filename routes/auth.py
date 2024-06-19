@@ -1,3 +1,6 @@
+## chat gpt 사용해서 코드 작성
+##auth.py
+
 from fastapi import APIRouter, Request, Depends, HTTPException, Form
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates

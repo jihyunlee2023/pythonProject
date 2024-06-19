@@ -1,3 +1,4 @@
+## chat gpt 사용해서 코드 작성 및 직접 코드 수정
 # alembic/versions/initial_migration.py
 
 from alembic import op
@@ -13,9 +14,9 @@ def upgrade():
     op.create_table(
         'users',
         sa.Column('id', sa.Integer, primary_key=True),
-        sa.Column('username', sa.String, unique=True, index=True),
-        sa.Column('email', sa.String, unique=True, index=True),
-        sa.Column('hashed_password', sa.String),
+        sa.Column('username', sa.String, unique=True, index=True), #직접 코드 작성
+        sa.Column('email', sa.String, unique=True, index=True), #직접 코드 작성
+        sa.Column('hashed_password', sa.String),    #직접 코드 작성
         #sa.Column('favorite_politicians', sa.String),
     )
 

@@ -1,5 +1,5 @@
 # myapi/import_data.py
-
+## chat gpt 사용해서 코드 작성
 import os
 import pandas as pd
 from sqlalchemy.orm import Session
