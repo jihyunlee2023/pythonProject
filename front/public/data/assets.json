@@ -1,0 +1,3040 @@
+[
+  {
+    "id": 0,
+    "assets": {
+      "total": 3500000,
+      "realEstate": 2000000,
+      "securities": 800000,
+      "deposits": 500000,
+      "usageRights": 200000
+    }
+  },
+  {
+    "id": 1,
+    "assets": {
+      "total": 2300000,
+      "realEstate": 1200000,
+      "securities": 500000,
+      "deposits": 300000,
+      "usageRights": 300000
+    }
+  },
+  {
+    "id": 2,
+    "assets": {
+      "total": 2800000,
+      "realEstate": 1500000,
+      "securities": 600000,
+      "deposits": 500000,
+      "usageRights": 200000
+    }
+  },
+  {
+    "id": 3,
+    "assets": {
+      "total": 4500000,
+      "realEstate": 2500000,
+      "securities": 1000000,
+      "deposits": 800000,
+      "usageRights": 200000
+    }
+  },
+  {
+    "id": 4,
+    "assets": {
+      "total": 5000000,
+      "realEstate": 3000000,
+      "securities": 1200000,
+      "deposits": 600000,
+      "usageRights": 200000
+    }
+  },
+  {
+    "id": 5,
+    "assets": {
+      "total": 3700000,
+      "realEstate": 2200000,
+      "securities": 900000,
+      "deposits": 400000,
+      "usageRights": 200000
+    }
+  },
+  {
+    "id": 6,
+    "assets": {
+      "total": 3100000,
+      "realEstate": 1700000,
+      "securities": 700000,
+      "deposits": 500000,
+      "usageRights": 200000
+    }
+  },
+  {
+    "id": 7,
+    "assets": {
+      "total": 4200000,
+      "realEstate": 2500000,
+      "securities": 900000,
+      "deposits": 600000,
+      "usageRights": 200000
+    }
+  },
+  {
+    "id": 8,
+    "assets": {
+      "total": 2900000,
+      "realEstate": 1600000,
+      "securities": 600000,
+      "deposits": 500000,
+      "usageRights": 200000
+    }
+  },
+  {
+    "id": 9,
+    "assets": {
+      "total": 3300000,
+      "realEstate": 1800000,
+      "securities": 800000,
+      "deposits": 500000,
+      "usageRights": 200000
+    }
+  },
+  {
+    "id": 10,
+    "assets": {
+      "total": 3500000,
+      "realEstate": 2000000,
+      "securities": 800000,
+      "deposits": 500000,
+      "usageRights": 200000
+    }
+  },
+  {
+    "id": 11,
+    "assets": {
+      "total": 2300000,
+      "realEstate": 1200000,
+      "securities": 500000,
+      "deposits": 300000,
+      "usageRights": 300000
+    }
+  },
+  {
+    "id": 12,
+    "assets": {
+      "total": 2800000,
+      "realEstate": 1500000,
+      "securities": 600000,
+      "deposits": 500000,
+      "usageRights": 200000
+    }
+  },
+  {
+    "id": 13,
+    "assets": {
+      "total": 4500000,
+      "realEstate": 2500000,
+      "securities": 1000000,
+      "deposits": 800000,
+      "usageRights": 200000
+    }
+  },
+  {
+    "id": 14,
+    "assets": {
+      "total": 5000000,
+      "realEstate": 3000000,
+      "securities": 1200000,
+      "deposits": 600000,
+      "usageRights": 200000
+    }
+  },
+  {
+    "id": 15,
+    "assets": {
+      "total": 3700000,
+      "realEstate": 2200000,
+      "securities": 900000,
+      "deposits": 400000,
+      "usageRights": 200000
+    }
+  },
+  {
+    "id": 16,
+    "assets": {
+      "total": 3100000,
+      "realEstate": 1700000,
+      "securities": 700000,
+      "deposits": 500000,
+      "usageRights": 200000
+    }
+  },
+  {
+    "id": 17,
+    "assets": {
+      "total": 4200000,
+      "realEstate": 2500000,
+      "securities": 900000,
+      "deposits": 600000,
+      "usageRights": 200000
+  }
+},
+{
+  "id": 18,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 19,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 20,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 21,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 22,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 23,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 24,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 25,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 26,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 27,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 28,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 29,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 30,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 31,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 32,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 33,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 34,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 35,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 36,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 37,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits":
+    600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 38,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 39,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 40,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 41,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 42,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 43,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 44,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 45,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 46,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 47,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 48,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 49,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 50,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 51,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 52,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 53,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 54,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 55,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 56,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 57,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 58,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 59,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 60,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 61,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 62,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 63,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 64,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 65,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 66,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 67,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 68,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 69,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 70,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 71,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 72,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 73,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 74,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 75,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits":
+    400000,
+
+    "usageRights": 200000
+
+  }
+},
+
+{
+  "id": 76,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 77,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 78,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 79,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 80,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 81,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 82,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 83,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000
+  }
+},
+{
+  "id": 84,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 85,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 86,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 87,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 88,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 89,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 90,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 91,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300
+  }
+},
+{
+  "id": 92,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 93,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 94,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 95,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 96,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 97,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 98,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 99,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits":
+    500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 100,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 101,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 102,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 103,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 104,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 105,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 106,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 107,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 108,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits":
+    500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 109,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 110,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 111,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 112,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 113,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 114,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 115,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 116,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 117,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 118,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits":
+    500000,
+    "usageRights": 200000
+
+  }
+},
+{
+  "id": 119,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 120,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 121,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 122,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 123,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 124,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 125,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 126,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 127,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 128,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits":
+    500000,
+
+    "usageRights": 200000
+  }
+},
+{
+  "id": 129,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 130,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 131,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 132,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 133,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 134,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 135,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 136,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits":
+    500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 137,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 138,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 139,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 140,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 141,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 142,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 143,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 144,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits":
+    600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 145,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 146,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 147,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 148,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 149,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 150,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 151,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 152,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000
+  }
+},
+{
+  "id": 153,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 154,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 155,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 156,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 157,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 158,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 159,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 160,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits":
+    500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 161,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 162,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 163,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 164,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 165,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 166,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 167,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 168,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits":
+    500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 169,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 170,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 171,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 172,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 173,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 174,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 175,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 176,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 177,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 178,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits":
+    500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 179,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 180,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 181,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 182,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000
+  }
+},
+{
+  "id": 183,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 184,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 185,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 186,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 187,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 188,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits":
+    500000,
+    "usageRights":
+    200000
+  }
+},
+{
+  "id": 189,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 190,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 191,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 192,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 193,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 194,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 195,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 196,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits":
+    500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 197,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 198,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 199,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 200,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 201,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 202,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 203,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 204,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits":
+    600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 205,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 206,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 207,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 208,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 209,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 210,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 211,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 212,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+  "usageRights": 200000
+  }
+},
+{
+  "id": 213,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 214,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 215,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 216,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 217,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 218,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits":
+    500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 219,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 220,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits":
+    500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 221,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 222,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 223,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 224,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 225,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 226,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 227,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 228,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits":
+    500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 229,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 230,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 231,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 232,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 233,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 234,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 235,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 236,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 237,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 238,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits":
+    500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 239,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 240,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 241,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 242,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 243,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 244,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 245,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 246,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 247,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 248,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits":
+    500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 249,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 250,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 251,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 252,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 253,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 254,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 255,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 256,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 257,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 258,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits":
+    500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 259,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 260,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 261,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 262,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 263,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 264,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 265,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 266,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 267,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 268,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits":
+    500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 269,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 270,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 271,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 272,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 273,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 274,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 275,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 276,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 277,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 278,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits":
+    500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 279,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 280,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 281,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 282,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 283,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 284,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 285,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 286,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 287,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 288,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits":
+    500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 289,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 290,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 291,
+  "assets": {
+    "total": 2300000,
+    "realEstate": 1200000,
+    "securities": 500000,
+    "deposits": 300000,
+    "usageRights": 300000
+  }
+},
+{
+  "id": 292,
+  "assets": {
+    "total": 2800000,
+    "realEstate": 1500000,
+    "securities": 600000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 293,
+  "assets": {
+    "total": 4500000,
+    "realEstate": 2500000,
+    "securities": 1000000,
+    "deposits": 800000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 294,
+  "assets": {
+    "total": 5000000,
+    "realEstate": 3000000,
+    "securities": 1200000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 295,
+  "assets": {
+    "total": 3700000,
+    "realEstate": 2200000,
+    "securities": 900000,
+    "deposits": 400000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 296,
+  "assets": {
+    "total": 3100000,
+    "realEstate": 1700000,
+    "securities": 700000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 297,
+  "assets": {
+    "total": 4200000,
+    "realEstate": 2500000,
+    "securities": 900000,
+    "deposits": 600000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 298,
+  "assets": {
+    "total": 2900000,
+    "realEstate": 1600000,
+    "securities": 600000,
+    "deposits":
+    500000,
+
+    "usageRights": 200000
+  }
+},
+{
+  "id": 299,
+  "assets": {
+    "total": 3300000,
+    "realEstate": 1800000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+},
+{
+  "id": 300,
+  "assets": {
+    "total": 3500000,
+    "realEstate": 2000000,
+    "securities": 800000,
+    "deposits": 500000,
+    "usageRights": 200000
+  }
+}
+
+]
