@@ -12,9 +12,6 @@ export default function Component() {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    // 로그인 로직을 여기에 추가할 수 있습니다.
-    // 예: 서버에 로그인 요청 보내기
-    // 로그인 성공 시 홈 화면으로 이동
     router.push("/");
   };
 
@@ -28,11 +25,11 @@ export default function Component() {
               <form onSubmit={handleLogin} className="space-y-4 w-full">
                 <div className="space-y-2 w-full">
                   <Label htmlFor="username">아이디</Label>
-                  <Input id="username" placeholder="아이디를 입력하세요" required type="text" className="w-full" /> {/* w-full 클래스 추가 */}
+                  <Input id="username" placeholder="아이디를 입력하세요." required type="text" className="w-full" /> {/* w-full 클래스 추가 */}
                 </div>
                 <div className="space-y-2 w-full">
                   <Label htmlFor="password">비밀번호</Label>
-                  <Input id="password"placeholder="비밀번호를 입력하세요"required type="password" className="w-full" /> {/* w-full 클래스 추가 */}
+                  <Input id="password"placeholder="비밀번호를 입력하세요."required type="password" className="w-full" /> {/* w-full 클래스 추가 */}
                 </div>
                 <CardFooter className="w-full">
                   <Button type="submit" className="w-full">로그인</Button>

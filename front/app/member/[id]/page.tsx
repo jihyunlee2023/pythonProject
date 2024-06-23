@@ -1,44 +1,44 @@
+//app/member/[id]/page.tsx
+
 "use client";
 
-import { useRouter } from 'next/router';
+import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-const MemberDetails = () => {
-  const router = useRouter();
-  const { id } = router.query;
-  const [member, setMember] = useState(null);
+const MemberDetailPage = () => {
+  const { id } = useParams();
+  const [memberData, setMemberData] = useState(null);
 
   useEffect(() => {
-    if (id) {
-      const fetchMemberData = async () => {
-        try {
-          const res = await fetch(`/api/members/${id}`);
-          if (!res.ok) {
-            throw new Error('Network response was not ok');
-          }
-          const data = await res.json();
-          setMember(data);
-        } catch (error) {
-          console.error('Error fetching member data:', error);
-        }
-      };
+    const fetchMemberData = async () => {
+      try {
+        const response = await fetch(`/api/members/${id}`);
+        const data = await response.json();
+        setMemberData(data);
+      } catch (error) {
+        console.error('Error fetching member data:', error);
+      }
+    };
 
+    if (id) {
       fetchMemberData();
     }
   }, [id]);
 
-  if (!member) {
+  if (!memberData) {
     return <div>Loading...</div>;
   }
 
   return (
     <div>
-      <h1>{member.name}</h1>
-      <p>Party: {member.party}</p>
-      <p>Constituency: {member.constituency}</p>
-      <p>Terms: {member.terms}</p>
+      <h1>{memberData.name}</h1>
+      <p>Party: {memberData.party}</p>
+      <p>Constituency: {memberData.constituency}</p>
+      <p>Gender: {memberData.gender}</p>
+      <p>Term: {memberData.term}</p>
+      {/* 다른 정보도 여기에 추가 가능 */}
     </div>
   );
 };
 
-export default MemberDetails;
+export default MemberDetailPage;
