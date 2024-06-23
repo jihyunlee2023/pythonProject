@@ -28,11 +28,11 @@ export default function Component() {
               <form onSubmit={handleLogin} className="space-y-4 w-full">
                 <div className="space-y-2 w-full">
                   <Label htmlFor="username">아이디</Label>
-                  <Input id="username" placeholder="아이디를 입력하세요" required type="text" className="w-full" /> {/* w-full 클래스 추가 */}
+                  <Input id="username" placeholder="아이디를 입력하세요." required type="text" className="w-full" /> {/* w-full 클래스 추가 */}
                 </div>
                 <div className="space-y-2 w-full">
                   <Label htmlFor="password">비밀번호</Label>
-                  <Input id="password"placeholder="비밀번호를 입력하세요"required type="password" className="w-full" /> {/* w-full 클래스 추가 */}
+                  <Input id="password"placeholder="비밀번호를 입력하세요."required type="password" className="w-full" /> {/* w-full 클래스 추가 */}
                 </div>
                 <CardFooter className="w-full">
                   <Button type="submit" className="w-full">로그인</Button>

@@ -31,20 +31,20 @@ export default function Component() {
             </div>
             <form onSubmit={handleSubmit} className="space-y-4 w-full">
               <div className="space-y-2 w-full">
-                <Label htmlFor="username">닉네임</Label>
-                <Input id="username" placeholder="닉네임을 입력하시오" required />
+                <Label htmlFor="username">ID</Label>
+                <Input id="username" placeholder="아이디를 입력하시오." required />
               </div>
               <div className="space-y-2 w-full">
                 <Label htmlFor="email">이메일</Label>
-                <Input id="email" placeholder="이메일을 입력하시오" required type="email" />
+                <Input id="email" placeholder="이메일을 입력하시오." required type="email" />
               </div>
               <div className="space-y-2 w-full">
                 <Label htmlFor="password">비밀번호</Label>
-                <Input id="password" placeholder="비밀번호를 입력하시오" required type="password" />
+                <Input id="password" placeholder="비밀번호를 입력하시오." required type="password" />
               </div>
               <div className="space-y-2 w-full">
                 <Label htmlFor="confirm-password">비밀번호 확인</Label>
-                <Input id="confirm-password" placeholder="동일한 비밀번호를 다시 입력하시오" required type="password" />
+                <Input id="confirm-password" placeholder="동일한 비밀번호를 다시 입력하시오." required type="password" />
               </div>
               <Button className="w-full" type="submit">
                 회원가입
